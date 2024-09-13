@@ -1,0 +1,87 @@
+kotlin version: 2.0.10
+error message: org.jetbrains.kotlin.util.FileAnalysisException: Somewhere in file C:/Users/abhi5/AndroidStudioProjects/FarmLinkApp/app/src/main/java/com/example/farmlinkapp/model/Category.kt: java.lang.IllegalStateException:                      Multiple plugins generated nested class with same name Companion for class com/example/farmlinkapp/model/Category:
+                    public final companion object Companion : R|kotlin/Any| {
+}
+
+public final companion object Companion : R|kotlin/Any| {
+}
+
+	at org.jetbrains.kotlin.util.AnalysisExceptionsKt.wrapIntoFileAnalysisExceptionIfNeeded(AnalysisExceptions.kt:62)
+	at org.jetbrains.kotlin.fir.FirCliExceptionHandler.handleExceptionOnFileAnalysis(Utils.kt:180)
+	at org.jetbrains.kotlin.fir.resolve.transformers.plugin.FirCompanionGenerationTransformer.transformFile(FirCompanionGenerationProcessor.kt:100)
+	at org.jetbrains.kotlin.fir.resolve.transformers.plugin.FirCompanionGenerationTransformer.transformFile(FirCompanionGenerationProcessor.kt:37)
+	at org.jetbrains.kotlin.fir.declarations.FirFile.transform(FirFile.kt:46)
+	at org.jetbrains.kotlin.fir.resolve.transformers.FirTransformerBasedResolveProcessor.processFile(FirResolveProcessor.kt:48)
+	at org.jetbrains.kotlin.fir.resolve.transformers.FirTotalResolveProcessor.process(FirTotalResolveProcessor.kt:36)
+	at org.jetbrains.kotlin.fir.pipeline.AnalyseKt.runResolution(analyse.kt:20)
+	at org.jetbrains.kotlin.fir.pipeline.FirUtilsKt.resolveAndCheckFir(firUtils.kt:76)
+	at org.jetbrains.kotlin.fir.pipeline.FirUtilsKt.buildResolveAndCheckFirViaLightTree(firUtils.kt:88)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineKt.compileModuleToAnalyzedFir(jvmCompilerPipeline.kt:313)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineKt.compileModulesUsingFrontendIrAndLightTree(jvmCompilerPipeline.kt:115)
+	at org.jetbrains.kotlin.cli.jvm.K2JVMCompiler.doExecute(K2JVMCompiler.kt:155)
+	at org.jetbrains.kotlin.cli.jvm.K2JVMCompiler.doExecute(K2JVMCompiler.kt:50)
+	at org.jetbrains.kotlin.cli.common.CLICompiler.execImpl(CLICompiler.kt:104)
+	at org.jetbrains.kotlin.cli.common.CLICompiler.execImpl(CLICompiler.kt:48)
+	at org.jetbrains.kotlin.cli.common.CLITool.exec(CLITool.kt:101)
+	at org.jetbrains.kotlin.incremental.IncrementalJvmCompilerRunner.runCompiler(IncrementalJvmCompilerRunner.kt:453)
+	at org.jetbrains.kotlin.incremental.IncrementalJvmCompilerRunner.runCompiler(IncrementalJvmCompilerRunner.kt:62)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.doCompile(IncrementalCompilerRunner.kt:506)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compileImpl(IncrementalCompilerRunner.kt:423)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.tryCompileIncrementally$lambda$9$compile(IncrementalCompilerRunner.kt:249)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.tryCompileIncrementally(IncrementalCompilerRunner.kt:267)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compile(IncrementalCompilerRunner.kt:120)
+	at org.jetbrains.kotlin.daemon.CompileServiceImplBase.execIncrementalCompiler(CompileServiceImpl.kt:676)
+	at org.jetbrains.kotlin.daemon.CompileServiceImplBase.access$execIncrementalCompiler(CompileServiceImpl.kt:92)
+	at org.jetbrains.kotlin.daemon.CompileServiceImpl.compile(CompileServiceImpl.kt:1661)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.IllegalStateException:                      Multiple plugins generated nested class with same name Companion for class com/example/farmlinkapp/model/Category:
+                    public final companion object Companion : R|kotlin/Any| {
+}
+
+public final companion object Companion : R|kotlin/Any| {
+}
+
+	at org.jetbrains.kotlin.fir.scopes.impl.FirGeneratedMemberDeclarationsStorage$ClassifierStorage.generateNestedClassifier(FirGeneratedScopes.kt:251)
+	at org.jetbrains.kotlin.fir.scopes.impl.FirGeneratedMemberDeclarationsStorage$ClassifierStorage.access$generateNestedClassifier(FirGeneratedScopes.kt:216)
+	at org.jetbrains.kotlin.fir.scopes.impl.FirGeneratedMemberDeclarationsStorage$ClassifierStorage$special$$inlined$createCache$1.invoke(FirCachesFactory.kt:71)
+	at org.jetbrains.kotlin.fir.scopes.impl.FirGeneratedMemberDeclarationsStorage$ClassifierStorage$special$$inlined$createCache$1.invoke(FirCachesFactory.kt:69)
+	at org.jetbrains.kotlin.fir.caches.FirThreadUnsafeCache.getValue(FirThreadUnsafeCachesFactory.kt:40)
+	at org.jetbrains.kotlin.fir.scopes.impl.FirGeneratedClassNestedClassifierScope.getNestedClassSymbol(FirGeneratedScopes.kt:281)
+	at org.jetbrains.kotlin.fir.scopes.impl.FirGeneratedClassNestedClassifierScope.getNestedClassSymbol(FirGeneratedScopes.kt:96)
+	at org.jetbrains.kotlin.fir.scopes.impl.FirNestedClassifierScope.processClassifiersByNameWithSubstitution(FirNestedClassifierScope.kt:36)
+	at org.jetbrains.kotlin.fir.scopes.impl.FirCompositeNestedClassifierScope.processClassifiersByNameWithSubstitution(FirNestedClassifierScope.kt:89)
+	at org.jetbrains.kotlin.fir.extensions.FirExtensionDeclarationsSymbolProvider.generateClassLikeDeclaration(FirExtensionDeclarationsSymbolProvider.kt:210)
+	at org.jetbrains.kotlin.fir.extensions.FirExtensionDeclarationsSymbolProvider.access$generateClassLikeDeclaration(FirExtensionDeclarationsSymbolProvider.kt:27)
+	at org.jetbrains.kotlin.fir.extensions.FirExtensionDeclarationsSymbolProvider$classCache$1.invoke(FirExtensionDeclarationsSymbolProvider.kt:44)
+	at org.jetbrains.kotlin.fir.extensions.FirExtensionDeclarationsSymbolProvider$classCache$1.invoke(FirExtensionDeclarationsSymbolProvider.kt:43)
+	at org.jetbrains.kotlin.fir.caches.FirThreadUnsafeCache.getValue(FirThreadUnsafeCachesFactory.kt:40)
+	at org.jetbrains.kotlin.fir.extensions.FirExtensionDeclarationsSymbolProvider.getClassLikeSymbolByClassId(FirExtensionDeclarationsSymbolProvider.kt:246)
+	at org.jetbrains.kotlin.fir.extensions.FirSwitchableExtensionDeclarationsSymbolProvider.getClassLikeSymbolByClassId(FirSwitchableExtensionDeclarationsSymbolProvider.kt:62)
+	at org.jetbrains.kotlin.fir.resolve.transformers.plugin.FirCompanionGenerationTransformer.generateCompanion(FirCompanionGenerationProcessor.kt:78)
+	at org.jetbrains.kotlin.fir.resolve.transformers.plugin.FirCompanionGenerationTransformer.generateAndUpdateCompanion(FirCompanionGenerationProcessor.kt:59)
+	at org.jetbrains.kotlin.fir.resolve.transformers.plugin.FirCompanionGenerationTransformer.transformRegularClass(FirCompanionGenerationProcessor.kt:54)
+	at org.jetbrains.kotlin.fir.resolve.transformers.plugin.FirCompanionGenerationTransformer.transformRegularClass(FirCompanionGenerationProcessor.kt:37)
+	at org.jetbrains.kotlin.fir.declarations.FirRegularClass.transform(FirRegularClass.kt:52)
+	at org.jetbrains.kotlin.fir.visitors.FirTransformerUtilKt.transformInplace(FirTransformerUtil.kt:20)
+	at org.jetbrains.kotlin.fir.declarations.impl.FirFileImpl.transformDeclarations(FirFileImpl.kt:79)
+	at org.jetbrains.kotlin.fir.declarations.impl.FirFileImpl.transformDeclarations(FirFileImpl.kt:28)
+	at org.jetbrains.kotlin.fir.resolve.transformers.plugin.FirCompanionGenerationTransformer.transformFile(FirCompanionGenerationProcessor.kt:49)
+	... 41 more
+
+
