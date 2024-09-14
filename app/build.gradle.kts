@@ -9,6 +9,7 @@ plugins {
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
     id("io.realm.kotlin")
+    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
 }
 android {
     namespace = "com.example.farmlinkapp1"
@@ -102,8 +103,8 @@ dependencies {
     implementation(libs.ui)
 
     //Coroutines
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
+    implementation(libs.kotlinx.coroutines.core.v171)
+    implementation(libs.kotlinx.coroutines.android)
 
     //Dagger-Hilt
     implementation(libs.hilt.android)
@@ -113,27 +114,29 @@ dependencies {
     //Realm DB
     implementation(libs.library.base)
     // If using Device Sync
-    implementation("io.realm.kotlin:library-sync:2.1.0")
+    implementation(libs.library.sync)
     // If using coroutines with the SDK
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1")
+    implementation(libs.jetbrains.kotlinx.coroutines.core)
 
     implementation(libs.play.services.maps)
     implementation(libs.maps.compose)
     implementation(libs.mongodb.driver.sync)
 
     //message bar compose
-    implementation("com.github.stevdza-san:MessageBarCompose:1.0.5")
+    implementation(libs.messagebarcompose)
 
     //one-tap compose
-    implementation("com.github.stevdza-san:OneTapCompose:1.0.0")
+    implementation(libs.onetapcompose)
 
     //maps sdk
-    implementation("com.google.maps.android:maps-compose:6.1.2")
+    implementation(libs.maps.compose.v612)
 
     // Optionally, you can include the Compose utils library for Clustering,
     // Street View metadata checks, etc.
-    implementation("com.google.maps.android:maps-compose-utils:6.1.2")
+    implementation(libs.maps.compose.utils)
 
     // Optionally, you can include the widgets library for ScaleBar, etc.
-    implementation("com.google.maps.android:maps-compose-widgets:6.1.2")
+    implementation(libs.maps.compose.widgets)
+
+    implementation(libs.play.services.maps)
 }

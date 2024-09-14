@@ -24,5 +24,6 @@ buildscript {
 //        id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin' version '2.0.1' apply false
 
         classpath("io.realm:realm-gradle-plugin:10.11.1")
+        classpath("com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin:2.0.1")
     }
 }

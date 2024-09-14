@@ -1,6 +1,7 @@
 [versions]
 agp = "8.5.2"
 coilCompose = "2.7.0"
+googleMapsCompose = "6.1.2"
 hiltAndroid = "2.52"
 hiltNavigationCompose = "1.2.0"
 kotlin = "2.0.10"
@@ -8,16 +9,23 @@ coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
+kotlinxCoroutinesCore = "1.7.1"
+kotlinxCoroutinesCoreVersion = "1.8.1"
 kotlinxSerializationJson = "1.7.1"
 libraryBase = "2.1.0"
+librarySync = "2.1.0"
 lifecycleRuntimeKtx = "2.8.4"
 activityCompose = "1.9.1"
 composeBom = "2024.08.00"
 mapsCompose = "2.5.2"
+mapsComposeUtils = "6.1.2"
 mapsComposeVersion = "2.11.4"
+mapsComposeWidgets = "6.1.2"
+messagebarcompose = "1.0.5"
 mongodbDriverSync = "4.4.0"
 navigationRuntimeKtx = "2.7.7"
 navigationCompose = "2.8.0-rc01"
+onetapcompose = "1.0.0"
 playServicesMaps = "19.0.0"
 ui = "1.6.8"
 uiTextGoogleFonts = "1.6.8"
@@ -29,6 +37,7 @@ androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-com
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
 hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroid" }
+jetbrains-kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCoreVersion" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -44,11 +53,19 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-navigation-runtime-ktx = { group = "androidx.navigation", name = "navigation-runtime-ktx", version.ref = "navigationRuntimeKtx" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesCoreVersion" }
+kotlinx-coroutines-core-v171 = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 library-base = { module = "io.realm.kotlin:library-base", version.ref = "libraryBase" }
+library-sync = { module = "io.realm.kotlin:library-sync", version.ref = "librarySync" }
 maps-compose = { module = "com.google.maps.android:maps-compose", version.ref = "mapsCompose" }
+maps-compose-utils = { module = "com.google.maps.android:maps-compose-utils", version.ref = "mapsComposeUtils" }
 maps-compose-v2114 = { module = "com.google.maps.android:maps-compose", version.ref = "mapsComposeVersion" }
+maps-compose-v612 = { module = "com.google.maps.android:maps-compose", version.ref = "googleMapsCompose" }
+maps-compose-widgets = { module = "com.google.maps.android:maps-compose-widgets", version.ref = "mapsComposeWidgets" }
+messagebarcompose = { module = "com.github.stevdza-san:MessageBarCompose", version.ref = "messagebarcompose" }
 mongodb-driver-sync = { module = "org.mongodb:mongodb-driver-sync", version.ref = "mongodbDriverSync" }
+onetapcompose = { module = "com.github.stevdza-san:OneTapCompose", version.ref = "onetapcompose" }
 play-services-maps = { module = "com.google.android.gms:play-services-maps", version.ref = "playServicesMaps" }
 ui = { module = "androidx.compose.ui:ui", version.ref = "ui" }
 androidx-ui-text-google-fonts = { group = "androidx.compose.ui", name = "ui-text-google-fonts", version.ref = "uiTextGoogleFonts" }
